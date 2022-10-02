@@ -1,0 +1,65 @@
+body{
+  margin: 0;
+}
+
+.forms{
+  text-align: center;
+}
+
+.title{
+  font-size: 4rem;
+  font-family: Arial, Helvetica, sans-serif;
+  margin-top: 150px;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+.urlText{
+  width: 500px;
+  height: 40px;
+  padding: 15px;
+  font-size: 1rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.btnns{
+  margin-top: 20px;
+  margin-right: 20px;
+}
+
+.dataCol{
+  height: 92vh;
+}
+
+.optionCol{
+  background-color: 'whitesmoke';
+}
+
+.link{
+  color: rgb(0, 138, 192);
+  font-size: 1rem;
+  font-weight: bold;
+  margin-top: 15px;
+}
+
+.profile{
+  margin-right: 15px;
+  color: #fafafa;
+  margin-left: 80%;
+  margin-bottom: 0;
+}
+
+.icons{
+  position: relative;
+}
+
+.logSign{
+  position: relative;
+  width: 10px;
+  height: 10px;
+  background-color: aquamarine;
+  top: 25px;
+  right: 0;
+  border-radius: 50%;
+}

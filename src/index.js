@@ -1,17 +1,27 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import React from 'react'
+import ReactDOM from 'react-dom/client'
+import './styles/index.css'
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
+import Redirect from './components/Redirect'
+import Login from './forms/Login'
+import Register from './forms/Register'
+import ResetPassword from './forms/ResetPass'
+import ForgotPassword from './components/ForgotPass'
+import { ContextProvider } from './contexts/Context'
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
+const root = ReactDOM.createRoot(document.getElementById('root'))
 root.render(
   <React.StrictMode>
-    <App />
+    <ContextProvider>
+      <Router>
+        <Switch>
+          <Route exact path='/'><Login /></Route>
+          <Route exact path='/register'><Register /></Route>
+          <Route exact path='/forgot-password'><ForgotPassword /></Route>
+          <Route exact path='/reset-password/:id'><ResetPassword /></Route>
+          <Route exact path='/redirect/:id'><Redirect /></Route>
+        </Switch>
+      </Router>
+    </ContextProvider>
   </React.StrictMode>
-);
-
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+)
